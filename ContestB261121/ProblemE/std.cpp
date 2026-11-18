@@ -1,0 +1,14 @@
+#include <iostream>
+#define endl '\n'
+#define rep(i, a, b) for (int i = (a); i < (b); i++)
+#define rrep(i, a, b) for (int i = (a); i <= (b); i++)
+#define int long long
+
+using namespace std;
+
+signed main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+
+    
+}
