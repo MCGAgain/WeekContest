@@ -79,5 +79,19 @@ signed main(int argc, char** argv) {
 
     AVERandom<> gen(seed);
 
+    long long A, B, M;
+
+    switch (tag) {
+        case 1:
+            A = gen.next_int(1, 100);
+            B = gen.next_int(1, 100);
+            M = gen.next_int(1, 50);
+            break;
+        case 3:
+            A = gen.next_int(100, 100000);
+            B = gen.next_int(100, 100000);
+            M = gen.next_int(100, 100000 / 2);
+            break;
+    }
     
 }
