@@ -111,14 +111,14 @@ signed main(int argc, char** argv) {
         long long digit_sum = gen.next_int(l, r);
 
         long long sum;
-        if (digit_sum <= 3) sum = gen.next_int(0, gen.p_10(digit_sum));
-        else  sum = gen.next_log_int(0, gen.p_10(digit_sum) - 1);
+        if (digit_sum <= 3) sum = gen.next_int(1, gen.p_10(digit_sum));
+        else  sum = gen.next_log_int(1, gen.p_10(digit_sum));
 
         long long a;
         if (gen.next_int(1, 1000) == 1) {
-            a = gen.next_int(0, 1) ? 0 : sum;
+            a = gen.next_int(0, 1) ? 1 : sum;
         } else {
-            a = gen.next_log_int(0, sum);
+            a = gen.next_log_int(1, sum);
         }
         long long b = sum - a;
 
