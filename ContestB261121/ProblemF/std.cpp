@@ -10,8 +10,7 @@ signed main() {
 
     int T; cin >> T;
     while (T--) {
-        int x; cin >> x;
-        int L = 64 - __builtin_clzll(x);   // x 的二进制位数
-        cout << (1ll << L) - 1 << endl;    
+        int x; cin >> x; // x 的二进制位数
+        cout << (1ll << (64 - __builtin_clzll(x))) - 1 << endl;    
     }
 }
