@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #define endl '\n'
 #define int long long
 
@@ -10,7 +11,10 @@ signed main() {
 
     int T; cin >> T;
     while (T--) {
+
         int x; cin >> x; // x 的二进制位数
-        cout << (1ll << (64 - __builtin_clzll(x))) - 1 << endl;    
+        cout << (1ll << (64 - __builtin_clzll(x))) - 1 << endl; 
+
     }
 }
+

@@ -19,10 +19,10 @@ signed main() {
 
     long long res = 1e18;
 
-    rrep(i, 1, 100) {
+    rrep(p, 1, 100) {
         long long sum = 0;
         rrep(j, 1, n) {
-            sum += (long long)(a[j] - i) * (a[j] - i);
+            sum += (long long)(a[j] - p) * (a[j] - p);
         }
         res = min(res, sum);
     }

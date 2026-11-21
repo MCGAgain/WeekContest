@@ -2,6 +2,7 @@
 #include <vector>
 #include <algorithm>
 #define rep(i, a, b) for (int i = (a); i < (b); i++)
+#define rrep(i, a, b) for (int i = (a); i <= (b); i++)
 #define endl '\n'
 
 using namespace std;
@@ -11,14 +12,14 @@ signed main() {
     cin.tie(0);
 
     int A, B, m; cin >> A >> B >> m;
-    vector<int> a(A), b(B);
+    vector<int> a(A + 10), b(B + 10);
 
     int min_a = 1e9, min_b = 1e9;
-    rep(i, 0, A) {
+    rrep(i, 1, A) {
         cin >> a[i];
         min_a = min(min_a, a[i]);
     }
-    rep(i, 0, B) {
+    rrep(i, 1, B) {
         cin >> b[i];
         min_b = min(min_b, b[i]);
     }
@@ -27,7 +28,7 @@ signed main() {
 
     while (m--) {
         int x, y, c; cin >> x >> y >> c;
-        ans = min(ans, a[x - 1] + b[y - 1] - c);
+        ans = min(ans, a[x] + b[y] - c);
     }
 
     cout << ans << endl;
